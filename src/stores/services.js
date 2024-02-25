@@ -5,7 +5,7 @@ import ServicesAPI from '@/api/ServicesAPI'
 export const userServicesStore = defineStore('services', () => {
 
     const services = ref([])
-
+    
     onMounted( async () =>{
         try{
             const {data} = await ServicesAPI.all()
