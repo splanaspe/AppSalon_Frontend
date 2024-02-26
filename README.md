@@ -13,6 +13,7 @@ npm vue-tailwind-datepicker
 Añadimos en tailwind.config.js
 ```javascript
 "./node_modules/vue-tailwind-datepicker/**/*.js/"
+...
 colors:{
     "vtd-primary" : colors.blue
 }
