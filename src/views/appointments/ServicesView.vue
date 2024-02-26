@@ -3,6 +3,7 @@
     import { userServicesStore } from '@/stores/services';
     import ServicesAPI from '@/api/ServicesAPI';
     import ServiceItem from '@/components/ServiceItem.vue';
+    
     const store = userServicesStore(); 
 
 </script>
