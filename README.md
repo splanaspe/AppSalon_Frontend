@@ -10,12 +10,13 @@ Proyecto FullStack MEVN para una App de citas de un salón de peluquería. Este 
 npm vue-tailwind-datepicker
 ```
 Añadimos en tailwind.config.js
-
+```javascript
 "./node_modules/vue-tailwind-datepicker/**/*.js/"
 colors:{
     "vtd-primary" : colors.blue
 }
-
+```
+Renderizamos en el componente:
 ```javascript
 <VueTailwindDatePicker
     i18n="es-mx"
