@@ -4,7 +4,8 @@ Proyecto FullStack MEVN para una App de citas de un salón de peluquería. Este 
 # Dependencias
 - Usamos Vue-Router y Pinia
 - Tailwindcss
-- vue-taiwind-datepicker
+  
+### vue-taiwind-datepicker
   
 ```javascript
 npm vue-tailwind-datepicker
