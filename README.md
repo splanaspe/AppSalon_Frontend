@@ -46,3 +46,5 @@ const date = ref({})
         }
     })
 ```
+[Official npm website documentation](https://www.npmjs.com/package/vue-tailwind-datepicker)
+[Website](https://vue-tailwind-datepicker.com/theming-options.html)

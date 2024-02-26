@@ -7,6 +7,7 @@ export const useAppointmentsStore = defineStore('appointments', () => {
     const services = ref([])
     const date = ref({})
     const hours = ref([])
+    const time = ref('')
 
     onMounted(() => {
         const startHour = 10
@@ -15,6 +16,7 @@ export const useAppointmentsStore = defineStore('appointments', () => {
             hours.value.push(hour+':00')
         }
     })
+
     function onServiceSelected(service){
         if(services.value.some(selectedService => selectedService._id === service._id)){
             services.value = services.value.filter(selectedService => selectedService._id !== service._id)
@@ -37,6 +39,21 @@ export const useAppointmentsStore = defineStore('appointments', () => {
 
     const noServicesSelected= computed( () => services.value.length === 0)
 
+    const isValidReservation = computed( () => {
+        return services.value.length !==0 && date.value.length !==0 && time.value.length !==0
+    })
+
+    const createAppointment = () => {
+        const appointment = {
+            services: services.value.map( service => service._id),
+            date: date.value,
+            time: time.value,
+            totalAmount: totalAmount
+        }
+
+        console.log(appointment)
+    }
+
     return {
         onServiceSelected,
         isServiceSelected,
@@ -44,6 +61,9 @@ export const useAppointmentsStore = defineStore('appointments', () => {
         totalAmount,
         noServicesSelected,
         date,
-        hours
+        hours,
+        time,
+        isValidReservation,
+        createAppointment
     }
 })
